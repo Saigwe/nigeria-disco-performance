@@ -1,0 +1,7 @@
+nigeria_disco_performance:
+  target: duckdb
+  outputs:
+    duckdb:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', '../warehouse/nerc.duckdb') }}"
+      threads: 4

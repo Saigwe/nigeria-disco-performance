@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: int_monthly_latest
+    data_tests:
+      - trust_tests.unique_combination:
+          arguments: {columns: [disco, month, measure]}

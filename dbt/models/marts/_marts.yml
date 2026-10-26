@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fct_disco_month
+    data_tests:
+      - trust_tests.unique_combination:
+          arguments: {columns: [disco, month]}
+    columns:
+      - name: disco
+        data_tests:
+          - accepted_values:
+              arguments: {values: ['Abuja', 'Benin', 'Eko', 'Enugu', 'Ibadan', 'Ikeja', 'Jos', 'Kaduna', 'Kano', 'Port Harcourt', 'Yola', 'All DisCos']}
+      - name: billed_ngn_bn
+        data_tests: [not_null]
+  - name: rpt_disco_quarter
+    data_tests:
+      - trust_tests.unique_combination:
+          arguments: {columns: [disco, quarter]}
+  - name: rpt_scorecard
+    columns:
+      - name: disco
+        data_tests: [unique, not_null]

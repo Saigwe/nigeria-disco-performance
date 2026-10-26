@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    description: "REAL. Extracted from NERC quarterly reports (nerc.gov.ng) by ingestion/extract_nerc.py."
+    tables:
+      - name: nerc_monthly_values
+        description: "One row per report, table, DisCo, month and measure, as printed (each month appears in two reports)."
+      - name: nerc_quarterly_published
+        description: "The quarterly efficiency printed at the end of each appendix row."
+      - name: nerc_atcc_published
+        description: "MYTO ATC&C target and published ATC&C loss per DisCo (reports from 2025/Q2)."
+      - name: nerc_extraction_issues
+        description: "Every token repaired or rejected during extraction, with its page."

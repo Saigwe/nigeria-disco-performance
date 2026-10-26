@@ -1,0 +1,21 @@
+name: nigeria_disco_performance
+version: "0.1.0"
+config-version: 2
+profile: nigeria_disco_performance
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: target
+clean-targets: [target, dbt_packages]
+
+models:
+  nigeria_disco_performance:
+    staging:
+      +schema: silver
+      +materialized: view
+    intermediate:
+      +schema: silver
+      +materialized: table
+    marts:
+      +schema: gold
+      +materialized: table
