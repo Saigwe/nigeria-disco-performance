@@ -124,7 +124,7 @@ Add a new quarter by appending its report path to `REPORTS` in the `Makefile`.
 - [ ] Earlier reports (before 2024/Q3 the file names and table layouts differ)
 - [ ] Metering rate per DisCo from the meter-installation appendices, and its link to billing efficiency
 - [ ] A one-page dashboard
-- [ ] 3-minute Loom walkthrough
+- [ ] 3-minute Loom walkthrough ([script ready](docs/walkthrough.md))
 
 ## Data and licence
 - **NERC quarterly reports:** published by the Nigerian Electricity Regulatory Commission at nerc.gov.ng. Figures are reproduced for analysis with the source cited; the reports remain NERC's.
